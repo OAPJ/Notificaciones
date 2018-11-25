@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practia_III</string>
+    <string name="login">LOGIN</string>
+    <string name="registrarse">REGISTRARSE</string>
+</resources>
