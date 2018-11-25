@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             consultarUsuario();
         }
         if(v.getId() == R.id.btRegistrarse){
-
+            Intent intent = new Intent(MainActivity.this, Registro.class);
+            startActivity(intent);
         }
     }
 
