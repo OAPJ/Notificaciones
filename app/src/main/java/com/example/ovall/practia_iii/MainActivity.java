@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void consultarUsuario() {
         //Hacemos una solicitud por GET
-        String URL = "http://192.168.0.16/getUsuario.php?correo="+etCorreo.getText().toString()+"&clave="+etClave.getText().toString();
+        //String URL = "http://192.168.0.16/getUsuario.php?correo="+etCorreo.getText().toString()+"&clave="+etClave.getText().toString();
+        String URL = "http://192.168.43.55/getUsuario.php?correo="+etCorreo.getText().toString()+"&clave="+etClave.getText().toString();
         //String URL = "http://192.168.0.16/getUsuario.php?correo=juan@gmail.com&clave=juan98";
 
         //Toast.makeText(getApplicationContext(),"URL", Toast.LENGTH_SHORT).show();
@@ -102,25 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             //Toast.makeText(getApplicationContext(),"4", Toast.LENGTH_SHORT).show();
                             Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
                         }
-
-
-                      /*  JSONObject miUsuarioJSON = response;
-                        Toast.makeText(getApplicationContext(),"5", Toast.LENGTH_SHORT).show();
-                        try{
-                            Toast.makeText(getApplicationContext(),"6", Toast.LENGTH_SHORT).show();
-                            int estado = miUsuarioJSON.getInt("estado");
-                            String mensaje = miUsuarioJSON.getString("mensaje");
-                            JSONObject usuario = miUsuarioJSON.getJSONObject("usuario");
-                            String nombre = usuario.getString("nombre");
-                            String correo = usuario.getString("correo");
-                            String clave = usuario.getString("clave");
-                            String token = usuario.getString("token");
-                        }catch (JSONException e){
-                            Toast.makeText(getApplicationContext(),"7", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
-                        }
-                        Toast.makeText(getApplicationContext(),"8", Toast.LENGTH_SHORT).show();*/
-                        //Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {

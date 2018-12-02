@@ -54,6 +54,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void notifyUser(String from, String notification){
         MyNotificationManager myNotificationManager = new MyNotificationManager(getApplicationContext());
 
-        myNotificationManager.showNotification(from, notification, new Intent(getApplicationContext(), Bienvenido.class));
+        myNotificationManager.showNotification(from, notification, new Intent(getApplicationContext(), Main2Activity.class));
     }
 }

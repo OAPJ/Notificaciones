@@ -46,6 +46,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
 
         idToken = SharedPrefManager.getInstance(Registro.this).getToken();
+        //Toast.makeText(getApplicationContext(),idToken,Toast.LENGTH_SHORT).show();
         /*
         broadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -77,7 +78,8 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
     private void compararCorreo() {
         //Hacemos una solicitud por GET
-        String URL = "http://192.168.0.16/getCorreo.php?correo="+etCorreoR.getText().toString();
+        //String URL = "http://192.168.0.16/getCorreo.php?correo="+etCorreoR.getText().toString();
+        String URL = "http://192.168.43.55/getCorreo.php?correo="+etCorreoR.getText().toString();
        // String URL = "http://192.168.0.16/getCorreo.php?correo=juan@gmail.com";
         JsonObjectRequest getSolicitudUsuario = new JsonObjectRequest(
                 Request.Method.GET,
@@ -122,9 +124,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void agregarUsuario(){
-        String URL = "http://192.168.0.16/addUsuario.php?%20correo="+etCorreoR.getText().toString()+"&nombre="+etNombreR.getText().toString()
-                +"&clave="+etClaveR.getText().toString()+"&token="+idToken;
+        //String URL = "http://192.168.0.16/addUsuario.php?%20correo="+etCorreoR.getText().toString()+"&nombre="+etNombreR.getText().toString()
+                //+"&clave="+etClaveR.getText().toString()+"&token="+idToken;
         //http://192.168.0.16/addUsuario.php?%20correo=ejemplo@gmail.com&nombre=Ejemplo&clave=ejemplo&token=ejmplo
+        String URL = "http://192.168.43.55/addUsuario.php?%20correo="+etCorreoR.getText().toString()+"&nombre="+etNombreR.getText().toString()
+                +"&clave="+etClaveR.getText().toString()+"&token="+idToken;
         JsonObjectRequest getSolicitudUsuario = new JsonObjectRequest(
                 Request.Method.GET,
                 URL,
